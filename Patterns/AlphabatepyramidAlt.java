@@ -1,4 +1,4 @@
-public class Alphabatepyramid {
+public class AlphabatepyramidAlt {
     static void pattern(int n){
         for(int i =0;i<n;i++){
             char c = 'A';
@@ -6,14 +6,13 @@ public class Alphabatepyramid {
                 System.out.print(" ");
             }
             for(int j=0;j<i*2+1;j++){
-                if(j>=((i*2+1)/2)){
-                    System.out.print(c);
-                    c--;
+                if(j== ((i*2+1)-1)){
+                    System.out.print('A');
                 }
                 else{
                     System.out.print(c);
-                    c++;
-                }
+                } 
+                c++;
             }
             System.out.println(" ");
         }
