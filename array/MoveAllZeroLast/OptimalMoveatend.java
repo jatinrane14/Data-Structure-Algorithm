@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class OptimalMoveatend {
     public static void main(String[] args) {
-        int arr[] = {1,2,7,8,2,5,7};
+        int arr[] = {0,0,0,0,2,5,0};
         int j = -1;
 
         for(int i=0;i<arr.length;i++){
