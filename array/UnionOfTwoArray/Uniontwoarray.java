@@ -1,7 +1,5 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class Uniontwoarray {
@@ -23,7 +21,6 @@ public class Uniontwoarray {
         return resA;
     }
     public static void main(String[] args) {
-        List<Integer> ls = new ArrayList<Integer>();
                 int arr1[]={1,2,2,3,4,6};
                 int arr[] = {1,2,3,4,5,6,7};
                 System.out.print(Arrays.toString(unionArray(arr1, arr)));
