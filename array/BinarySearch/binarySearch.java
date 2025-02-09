@@ -21,4 +21,5 @@ public class binarySearch {
             System.out.println("Element is not found");
         }
     }
+
 }
