@@ -1,4 +1,4 @@
-public class toLower {
+public class StringLower {
     public static String toLower(String st){
         String newStr="";
         for(int i =0;i<st.length();i++){
