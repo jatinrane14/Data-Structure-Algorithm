@@ -18,6 +18,6 @@ public class Sentencepalindrome {
         return true;
     }
     public static void main(String[] args) {
-        System.out.println(isPalindrom("a a"));
+        System.out.println(isPalindrom(""));
     }   
 }
