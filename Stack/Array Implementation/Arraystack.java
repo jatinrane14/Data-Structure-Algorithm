@@ -1,4 +1,4 @@
-class LinkedList{
+class Mystack{
     private int top = -1;
     private int arr[] = new int[1000];
     public void push(int data){
@@ -25,9 +25,9 @@ class LinkedList{
         }
     }
 }
-public class ArrayLL {
+public class Arraystack {
     public static void main(String args[]){
-        LinkedList List = new LinkedList();
+        Mystack List = new Mystack();
         List.push(45);
         List.push(5);
         List.push(4);
