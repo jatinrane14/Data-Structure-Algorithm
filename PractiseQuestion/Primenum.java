@@ -29,6 +29,6 @@ public class Primenum {
         }
     }
     public static void main(String[] args) {
-        System.out.println(checkPrime(15));
+        System.out.println(checkPrime(1));
     }
 }
