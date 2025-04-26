@@ -10,7 +10,7 @@ public class RemoveDuplicateOptimal {
         return i+1;
     }
     public static void main(String[] args) {
-        int arr[]={1,2,2,3,4,5,6,6,6,7,7};
+        int arr[]={1,2,2,3,4,5,6,6,6,7,7,6};
         int ind = removeDuplicate(arr);
         for(int i =0;i<ind;i++){
             System.out.print(arr[i]+" ");

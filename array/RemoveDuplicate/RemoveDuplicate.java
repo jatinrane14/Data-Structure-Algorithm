@@ -10,20 +10,23 @@ import java.util.Set;
  * 6. Return the new array.
  */
 public class RemoveDuplicate {
-    static int removeDuplicate(int[] arr){
+    static int[] removeDuplicate(int[] arr){
         Set<Integer> s = new HashSet<>();
         int index=0;
         for(int i=0;i<arr.length;i++){
             s.add(arr[i]);
+            arr[i] = 0;
         }
         for (int it : s) {
             arr[index] = it;
             index++;
         }
-        return index;
+        return arr;
     }
     public static void main(String args[]){
-        int arr[]={1,2,2,3,4,4,5,6};
-        System.out.println(removeDuplicate(arr));
+        int arr[]={8,8,6,3,5,5,7,6,6};
+        for (int i : removeDuplicate(arr)) {
+            System.out.print(i+" ");
+        }
     }
 }
