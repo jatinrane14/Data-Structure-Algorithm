@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class Solution {
     public static List<Integer> dup(int arr[]){
         List ls = new ArrayList<Integer>();
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i; j < arr.length-1; j++) {
+            for (int j = i+1; j < arr.length; j++) {
                 if (arr[i]==arr[j]) {
                     ls.add(arr[i]);
                     break;
