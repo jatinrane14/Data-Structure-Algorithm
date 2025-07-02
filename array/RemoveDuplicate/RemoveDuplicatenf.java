@@ -14,9 +14,9 @@ public class RemoveDuplicatenf {
                     if (elem!=arr[i]) {
                         flag = true;
                         continue;
-                    }     
-                    flag = false; 
-                    break;     
+                    }
+                    flag = false;  
+                    break;
                 }
                 if (flag) {
                     ls.add(arr[i]);
@@ -28,7 +28,7 @@ public class RemoveDuplicatenf {
         }
      }
     public static void main(String[] args) {
-        int arr[] = {1,1,2,3,4,4,5,4};
+        int arr[] = {1,2,3,4,4,5,4};
         removeDuplicate(arr);
     }
 }
