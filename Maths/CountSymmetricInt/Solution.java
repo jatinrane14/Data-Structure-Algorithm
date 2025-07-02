@@ -1,63 +1,35 @@
-public class Solution {
-    public static int count(int num){
-        int ld;
-        int count=0;
-        while(num>0){
-            ld = num %10;
-            count++;
-            num/=10;
-        }
-        // System.out.println(count);
-        return count;
-    }
-    public static int revSum(int num,int digitCount){
-        int ld;
-        int rev=0;
-        while(num>0){
-            ld = num %10;
-            rev = rev*10+ld;
-            num/=10;
-        }
-        int sum=0,i=0;
-        while(rev>0){
-            ld = rev%10;
-            sum+=ld;
-            rev/=10;
-            i++;    
-            if(i==(int)(digitCount/2)){
-                break;
-            }
-        }
-        return sum;
-    }
-    public static int oriSum(int num,int digitCount){
-        int ld, sum=0,i=0;
-        while(num>0){
-            ld = num%10;
-            sum+=ld;
-            num/=10;
-            i++;
-            if(i==(int)(digitCount/2)){
-                break;
-            }
-        }
-        return sum;
-    }
+class Solution {
     public static int countSymmetricIntegers(int low, int high) {
-        int symmetricCount=0;
-        for(int i = low;i<=high;i++){
-            if(i<10){
+        int count = 0;
+        for (int k = low; k <= high; k++) {
+            String Str = Integer.toString(k);
+            int countDigit = Str.length();
+
+            if (countDigit % 2 != 0) {
                 continue;
             }
-            int digitCount = count(i);
-            System.out.println(i);
-            if(revSum(i,digitCount)==oriSum(i,digitCount)){
-                symmetricCount++;
+
+            int half = countDigit / 2;
+            int rightSum = 0;
+            int leftSum = 0;
+            System.out.println("countDigit: " + countDigit);
+
+            for (int i = 0; i < half; i++) {
+                leftSum += Str.charAt(i) - '0';
+            }
+
+            for (int i = half; i < countDigit; i++) {
+                rightSum+=Str.charAt(i)-'0';
+            }
+
+            if (leftSum == rightSum) {
+                count++;
             }
         }
-        return symmetricCount;
+        return count;
     }
+
     public static void main(String[] args) {
-        System.out.println(countSymmetricIntegers(1200, 1230));
+        System.out.println(countSymmetricIntegers(1, 100));
     }
 }
