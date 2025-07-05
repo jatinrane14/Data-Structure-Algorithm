@@ -6,7 +6,7 @@ public class LargestElementBrute {
         System.out.println("Largest Element is: "+largest(a));
     }
     static int largest(int arr[]){
-        Arrays.sort(arr); 
-        return (arr[arr.length-1]);
+        Arrays.sort(arr);
+        return arr[arr.length-1];
     }
 }
