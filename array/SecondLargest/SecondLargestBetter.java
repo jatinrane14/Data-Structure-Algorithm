@@ -6,7 +6,7 @@ public class SecondLargestBetter {
                 largest= arr[i];
             }
         }
-        int sLargest = -1;
+        int sLargest = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i]>sLargest && arr[i]!=largest) {
                 sLargest = arr[i];
