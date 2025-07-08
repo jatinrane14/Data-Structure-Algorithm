@@ -1,3 +1,4 @@
+import java.lang.*;
 public class SecondLargest {
     static int SecondLar(int arr[]){
         int lar = arr[0],Slag=-1;
