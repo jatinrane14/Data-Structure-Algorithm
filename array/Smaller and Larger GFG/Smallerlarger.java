@@ -1,4 +1,4 @@
-//Q. Given a sorted array arr and a value target, return an array of size 2. The first value is the number of elements less than or equal to the target, and the second value is the number of elements greater than or equal to the target.
+//Q. Given a sorted array arr of nnon-repeating elements and a value target, return an array of size 2. The first value is the number of elements less than or equal to the target, and the second value is the number of elements greater than or equal to the target.
 
 import java.util.Arrays;
 
