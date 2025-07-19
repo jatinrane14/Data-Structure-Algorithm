@@ -21,9 +21,9 @@ public class Uniontwoarray {
         return resA;
     }
     public static void main(String[] args) {
-                int arr1[]={1,2,2,3,4,6};
-                int arr[] = {1,2,3,4,5,6,7};
-                System.out.print(Arrays.toString(unionArray(arr1, arr)));
+        int arr1[]={1,2,2,3,4,6};
+        int arr[] = {1,2,3,4,5,6,7};
+        System.out.print(Arrays.toString(unionArray(arr1, arr)));
                 
     }
 }
