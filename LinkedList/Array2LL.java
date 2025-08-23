@@ -16,11 +16,11 @@ public class Array2LL {
             return null;
         }
         Node head = new Node(arr[0]);
-        Node tail = head;
+        Node mover = head;
         for (int i = 1; i < arr.length; i++) {
             Node newNode  = new Node(arr[i]);
-            tail.next = newNode;
-            tail = newNode;
+            mover.next = newNode;
+            mover = newNode;
         }
         return head;
     }
