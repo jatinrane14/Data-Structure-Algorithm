@@ -28,11 +28,13 @@ class Mystack{
 public class Arraystack {
     public static void main(String args[]){
         Mystack List = new Mystack();
-        List.push(45);
+        List.push(45);11
         List.push(5);
         List.push(4);
         List.push(47);
         List.pop();
+        List.pop();
+        List.push(47);
         List.printList();
     }
 }
