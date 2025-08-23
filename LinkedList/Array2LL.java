@@ -24,13 +24,23 @@ public class Array2LL {
         }
         return head;
     }
+    static int lengthOfLL(Node temp){
+        Node temp1  = temp;
+        int count =0;
+        while(temp1 != null) {
+            count ++;
+            temp1 = temp1.next;
+        }
+        return count;
+    }
     public static void main(String[] args) {
-        int[] arr = {16,2,3,4,5};
+        int[] arr = {16,2,3,4,5,6};
         Node head = converArrToLL(arr);
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.data);
             temp = temp.next;
         }
+        System.out.print("Length of Liked List: "+lengthOfLL(head));
     }
 }
