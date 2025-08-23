@@ -27,10 +27,10 @@ public class Array2LL {
     public static void main(String[] args) {
         int[] arr = {16,2,3,4,5};
         Node head = converArrToLL(arr);
-        
-        while (head != null) {
-            System.out.println(head.data);
-            head = head.next;
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.data);
+            temp = temp.next;
         }
     }
 }
