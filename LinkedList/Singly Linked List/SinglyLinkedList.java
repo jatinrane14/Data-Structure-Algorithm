@@ -11,6 +11,7 @@ class Node{
 
     public void insertAtBeginning(int data){
         Node newNode  = new Node(data);
+        newNode.next = head;
         head = newNode;
     } 
     public void insertAtTail(int data){
@@ -26,7 +27,28 @@ class Node{
         temp.next = newNode;
     }
     public void insertAtPosition(int data, int position){
-        
+        Node newNode = new Node(data);
+        if(head == null){
+            if(position ==1){
+                head = newNode;
+                return;
+            }
+        }
+        if(position==1){
+            insertAtBeginning(data);
+            return;
+        }
+        int count=0;
+        Node temp =  head;
+        while (temp != null) {
+            count++;
+            if(count == position-1){
+                newNode.next = temp.next;
+                temp.next = newNode;
+                break;
+            }
+            temp = temp.next;
+        }
     }
     public void display(){
         Node temp = head;
@@ -41,6 +63,7 @@ public class SinglyLinkedList {
         LinkedList list = new LinkedList();
         list.insertAtTail(13);
         list.insertAtTail(14);
+        list.insertAtPosition(12, 1);
         list.display();
     }
 }
