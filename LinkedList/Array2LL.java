@@ -33,14 +33,27 @@ public class Array2LL {
         }
         return count;
     }
+    static void print(Node head){
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+    static Node deleteFromHead(Node head){
+        if (head==null) {
+            return head;
+        }
+        head = head.next;
+        return head;
+    }
     public static void main(String[] args) {
         int[] arr = {16,2,3,4,5,6};
         Node head = converArrToLL(arr);
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.data);
-            temp = temp.next;
-        }
+        print(head);
+        head = deleteFromHead(head);
+        print(head);
         System.out.print("Length of Liked List: "+lengthOfLL(head));
     }
 }
