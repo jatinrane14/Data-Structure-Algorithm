@@ -50,6 +50,28 @@ class Node{
             temp = temp.next;
         }
     }
+    void insertBeforeValue(int data,int value){
+        if(head == null){
+            return;
+        }
+        if(head.data == value){
+            Node newNode =  new Node(data);
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            if (temp.next.data == value) {
+                Node newNode =  new Node(data);
+                newNode.next = temp.next;
+                temp.next = newNode;
+                break;
+            }
+            temp = temp.next;
+        }
+        return;
+    }
     public void display(){
         Node temp = head;
         while (temp != null) {
@@ -64,6 +86,7 @@ public class SinglyLinkedList {
         list.insertAtTail(13);
         list.insertAtTail(14);
         list.insertAtPosition(12, 1);
+        list.insertBeforeValue(43, 14);
         list.display();
     }
 }
