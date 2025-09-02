@@ -7,7 +7,6 @@ class Node{
     }
 }class LinkedList{
     private Node head = null;
-    private Node tail = null;
 
     public void insertAtBeginning(int data){
         Node newNode  = new Node(data);
@@ -72,6 +71,19 @@ class Node{
         }
         return;
     }
+    void deleteHead(){
+        if(head == null){
+            return;
+        }
+        head = head.next;
+    }
+    void deleteTail(){
+        Node temp = head;
+        while (temp.next.next!=null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
     public void display(){
         Node temp = head;
         while (temp != null) {
@@ -87,6 +99,7 @@ public class SinglyLinkedList {
         list.insertAtTail(14);
         list.insertAtPosition(12, 1);
         list.insertBeforeValue(43, 14);
+        list.deleteHead();
         list.display();
     }
 }
