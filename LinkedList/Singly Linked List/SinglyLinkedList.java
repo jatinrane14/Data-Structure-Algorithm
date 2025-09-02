@@ -84,6 +84,26 @@ class Node{
         }
         temp.next = null;
     }
+    void deletePosition(int pos){
+        int count =0;
+        if (head == null) {
+            return;
+        }
+        if (pos==1) {
+            deleteHead();
+        }
+        Node temp = head;
+        while (temp != null) {
+            count++;
+            if (count == pos-1) {
+                Node temp2 = temp.next.next;
+                temp.next = temp2;
+                temp2 = null;
+                return;
+            }
+            temp = temp.next;
+        }
+    }
     public void display(){
         Node temp = head;
         while (temp != null) {
@@ -95,11 +115,12 @@ class Node{
 public class SinglyLinkedList {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.insertAtTail(13);
-        list.insertAtTail(14);
-        list.insertAtPosition(12, 1);
-        list.insertBeforeValue(43, 14);
-        list.deleteHead();
+        list.insertAtTail(13); // 13
+        list.insertAtTail(14); // 13->14
+        list.insertAtPosition(12, 1); // 12->13->14
+        list.insertBeforeValue(43, 14); // 12->13->43->14
+        list.deleteHead(); // 13->43->14 
+        list.deletePosition(3); // 13->43
         list.display();
     }
 }
